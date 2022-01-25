@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog de Calatorii</title>
+    <link href="style_home.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="home.js" defer></script>
+</head>
+<body>
+
+<h1>BLOGUL MEU DE CĂLĂTORII</h1>
+
+<nav>
+    <ul class="meniu">
+        <li><a href="Home.html"><b>Home</b></a></li>
+        <li><a href="calatorii.html"> <b>Călătoriile mele</b> </a>
+            <ul class="submeniu">
+                <li><a href="calatorii.html#asia"> <b>Asia</b> </a></li>
+                <li><a href="calatorii.html#eur"> <b>Europa</b> </a></li>
+                <li><a href="calatorii.html#usa"> <b>America</b> </a></li>
+            </ul>
+        </li>
+        <li><a href="oferte.html"> <b>Oferte de vacanțe</b></a></li>
+        <li><a href="galerie.html"> <b>Galerie</b> </a></li>
+    </ul>
+</nav>
+
+
+
+<img id="trv" src="travel.jpeg" alt="travel" >
+
+<section class="home">
+    <p class="titlu_home"><b>Home</b></p>
+    <h2 id="welcome">Bine ai venit pe blogul meu !</h2>
+</section>
+
+<div class="container">
+
+<section class="home">
+    <section id="prezentare">
+        <p>Dacă și tu vrei să vezi lumea, să descoperi secrete nebănuite și să te distrezi la maxim, aici este locul de unde să începi.
+            Ti-am pregătit câteva dintre aventurile mele de unde te poți inspira, dar si multe oferte de vacanțe. In galeria foto vei desoperi poze facute chiar de mine cu unele dintre locurile vizitatea in decursul anilor.
+            Explorează acest blog !</p>
+        <img id="har" src="harta.jpg" alt="harta" >
+    </section>
+</section>
+
+    <aside class="alte_bloguri">
+        <p id="titlu_aside">Bloguri pe care le recomand...</p>
+        <ol>
+            <li> <a class='link' href="https://aventurescu.ro/">Aventurescu</a></li>
+            <li> <a class='link' href="https://calatorinbascheti.ro/">Calatori in Bascheti</a></li>
+            <li> <a class='link' href="https://calatoruldigital.ro/">Calatorul digital</a></li>
+            <li> <a class='link' href="https://calatorinbascheti.ro/">Prin lume</a></li>
+            <li> <a class='link' href="https://lipa-lipa.ro/">Lipa Lipa</a></li>
+            <li> <a class='link' href="https://travelzoom.ro/">Travel Zoom</a></li>
+            <li> <a class='link' href="http://www.ralucalatoreste.ro/">Raluca calatoreste</a></li>
+        </ol>
+    </aside>
+</div>
+
+
+<div class="quiz">
+    <p id="mesaj_guiz">Viziteaza site-ul nostru si revino la acest quiz pentru ati testa atentia !</p>
+    <p id="timp">Testul incepe cand dai start.</p>
+    <button id="start" onclick="dau_start()">START!</button>
+    <div class="intrebari">
+        <fieldset>
+            <p>Cate continente au fost prezentate?</p>
+            <label><input type="number" id="nr"></label>
+        </fieldset>
+        <fieldset>
+            <p>Care dintre orase a fost vizitat de mine?</p>
+            <label><input type="radio" id="NY" name="oras" value="NewYork"> NewYork </label>
+            <label><input type="radio" id="B" name="oras" value="Brasov">Brasov</label>
+            <label><input type="radio" id="S" name="oras" value="Sibiu">Sibiu</label>
+        </fieldset>
+
+        <fieldset>
+            <p>Care dintre orase a primit cele mai putine stelute?</p>
+            <label><input type="radio" id="L" name="stelute" value="Lisabona"> Lisabona </label>
+            <label><input type="radio" id="BE" name="stelute" value="Beijing">Beijing</label>
+            <label><input type="radio" id="BER" name="stelute" value="Berlin">Berlin</label>
+
+        </fieldset>
+
+
+    </div>
+    <div id="rezultat">
+        <button id="check" onclick="verificare()">Verifica!</button>
+        <p id="nota"></p>
+    </div>
+    <p id="ultimul_joc"></p>
+</div>
+
+
+<div id="joc">
+    <p id="titlu_joc">JOC MAGIC</p>
+    <p>Vrei sa afli unde vei calatori vara aceasta? Lasa-te purtat de val si intra in jocul nostru...</p>
+    <div id="instructiuni">
+        <p>Apasa butonul START pentru a descoperi ambele raspunsuri. Daca vrei sa le vezi separat:</p>
+        <p>- Da click pe '?' pentru a vedea unde pleci in vacanta</p>
+        <p>- Apasa tasta ENTER pentru a vedea cat te costa</p>
+    </div>
+    <div id="sign">
+        <img id="semn" src="semn.png" alt="?" onclick="changeSemn()">
+        <p id ="play" onclick="ambele()">START</p>
+        <p id="enter">ENTER</p>
+    </div>
+    <p>Dar cu ce te imbraci ? Trebuie sa fii cool in aceasta excursie, asa ca afla culorile potrivite pentru tine apasand cadranele de mai jos.</p>
+    <p>Ca un joc sa fie interesant este nevoie de cateva reguli. Daca vrei sa afli mai multe dintr-un singur click, apasa un cadran mai mic,
+        in schimb, daca nu vrei sa aplici regulile, doar bifeaza casuta de mai jos si poti vedea surpriza fiecarui cadran independent.</p>
+    Nu aplic reguli:
+    <input type="checkbox" id="stop">
+
+    <div id="pantaloni" onclick="schimb_pantaloni()">PANTALONI
+        <div id="bluza" onclick="schimb_bluza(event)">BLUZA
+            <div id="palarie" onclick="schimb_palarie(event)">PALARIE</div>
+        </div>
+    </div>
+
+<div>
+    <p id="C1"></p>
+    <p id="C2"></p>
+    <p id="C3"></p>
+</div>
+
+
+</div>
+
+<p id="mesaj_forum">Vrei sa impartasesti ganduri si sentimente cu alti pasionati de calatorii? Intra pe forum-ul nostru. <a id="forum" href="Forum.html"><b> CATRE FORUM !</b></a></p>
+<a id="pag404" href="Pag404.html"><b>CASTIGA O EXCURSIE ACUM !</b></a>
+
+
+</body>
+<footer id="sectiune_date_contact">
+    <p id="date_contact"><b>DATE DE CONTACT</b></p>
+    <div class="date">
+        <p class="paragraf">Ion Alexandra</p>
+        <p class="paragraf">Email: alexandra.ion@s.unibuc.ro</p>
+        <p class="paragraf">Facultatea de Matematica si Informatica, Universitatea Bucuresti</p>
+    </div>
+</footer>
+</html>

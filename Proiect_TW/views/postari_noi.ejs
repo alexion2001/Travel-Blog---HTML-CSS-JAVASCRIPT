@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="us">
+<head>
+    <meta charset="utf-8">
+    <title>EJS</title>
+
+</head>
+<body>
+
+<article id="info">
+    <h1>POSTARI NOI</h1>
+    <%for (i=0; i<new_post.length;i++ ) {%>
+    <div>
+        <p>TOPICUL:<%=new_post[i].titlu%></p>
+        <p>POSTAT DE:<%=new_post[i].autor%></p>
+        <p>MESAJUL:<%=new_post[i].text%></p>
+    </div>
+
+    <%}%>
+</article>
+
+</body>
+</html>

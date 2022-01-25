@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog de Calatorii - FORUM</title>
+    <link href="style_forum.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="forum.js" defer></script>
+</head>
+<body>
+<div id="up">
+<div class="log">
+    <label ><b>Username</b></label>
+    <input type="text" placeholder="Username" id="user" name="user" required>
+
+    <label ><b>Password</b></label>
+    <input type="password" placeholder="Password" id="psw" name="psw" required>
+<div id="but">
+    <button id="in" type="submit" onclick="cont()">LOGIN</button>
+    <br>
+    <div id="well"> </div>
+    <button id="out" type="submit" onclick="iesire_cont()" >LOGOUT</button>
+
+</div>
+</div>
+</div>
+<h1 id="titlu">FORUM</h1>
+
+<a href="Home.html">~BLOGUL MEU DE CALATORII~</a>
+
+<div id="mes">
+    <p>Bine ai venit pe forum-ul nostru. Aici fiecare idee prinde viata printre pasionatii de calatorie. Lasa-ti gandurile sa zboare.</p>
+
+</div>
+<p id="post">POSTARI</p>
+
+<div id="corp">
+    <div>
+
+            <fieldset id="corpul_postarii">
+                <label>Topicul</label>
+                <input type="text" placeholder="Titlul mesajului tau..." id="nume" name="nume">
+                <br>
+                <label>Numele</label>
+                <input type="text" placeholder="Numele tau, asa cum vrei sa apara..." id="autor" name="nume_aut">
+                <br>
+                <label>Mesajul</label>
+                <input type="text" placeholder="Aici poti scrie cel mai frumos mesaj..." id="mesaj" name="postarea">
+
+            </fieldset>
+
+        <button id="posteaza" onclick="afisez_postare()"> POSTEZ </button>
+    </div>
+    <!-- postari noi  -->
+    <div id="postarile_noi"> </div>
+    <!-- postari vechi  -->
+    <div id="postari"> </div>
+
+
+</div>
+
+
+</body>
+</html>
+

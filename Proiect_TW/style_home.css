@@ -1,0 +1,262 @@
+body{background-color: #454743;}
+h1::first-letter {font-size:200%; color: #69D508;}
+h1{color: ghostwhite;
+  font-family: cursive;
+}
+
+/*incepe meniul*/
+nav ul li a{
+    font-family: serif ;
+    text-decoration: none;
+    color:  #454743;
+    display: block;
+    width:100%;
+
+}
+nav ul {
+    list-style-type: none;} /*scoate bulina*/
+nav>ul.meniu{height:100%;}
+
+nav   /*dimensiuni bara meniu si scris, culori, linii de incadrare meniu*/
+{
+    width: 100%;
+    height:2.5em;
+    background-color: #ADFF2F;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.meniu{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    }
+.meniu > li {
+    flex-grow: 2;
+    height: 2.5em;
+    line-height: 2.5em;
+    text-align: center;
+    flex-basis:0; /*centrare scris, dimensiuni*/
+}
+
+
+.meniu > li > ul.submeniu {
+    display: none;   /*ascunde desfasurarea meniurilor*/
+}
+.meniu > li:hover > ul.submeniu {  /*pui click si afiseaza submeniu*/
+    display: block;
+    background-color: #aff67b;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+.meniu > li:hover > ul.submeniu:hover{font-style:italic;}
+.meniu li:hover {
+    background-color: #D3FF90;
+    font-style:italic;
+    transition: background-color 1s,color 1s;
+    }
+/*schimba culoarea cand pui clic*/
+
+
+#trv{width: 100%;}
+/*Sectiunea home*/
+
+.home > .titlu_home{
+    font-size: 50px;
+    color: #69D508;
+    text-align: center;}
+.home > #welcome{
+    color: #aff67b;
+    text-align: center;}
+.home > #prezentare{
+    font-size: 20px;
+    color: ghostwhite;
+    text-align: center;
+    background: rgba(92, 95, 92, 0.4);
+    padding: 5%;
+}
+
+.alte_bloguri{
+    padding: 5%;
+    border: 3px solid #9ce359;
+    background: rgba(204, 237, 153, 0.4);
+
+}
+#titlu_aside{
+    font-size: 25px;
+    color: #4a4a3e;
+    font-weight: bold;
+    text-align: center;
+}
+.alte_bloguri>ol{
+    font-size: 23px;
+    line-height: 1.5;
+    text-decoration: none;
+    color: ghostwhite;
+}
+.link:visited{color: ghostwhite;}
+.link:hover{ color: #79e70f;}
+
+
+.container{
+    display: grid;
+    grid-template-areas:
+    'prezentare prezentare alte_bloguri alte_bloguri';
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+@media screen and (max-width:1000px)
+{   .container{
+        display: grid;
+        grid-template-areas:'prezentare' 'alte_bloguri';
+        grid-gap: 10px;
+        padding: 10px;
+
+    }
+
+    .alte_bloguri>ol{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        font-size: 18px;
+        list-style-type: none;
+        text-align: center;
+
+    }
+}
+
+
+/*#sectiune_date_contact{
+         margin-top: 100px;
+         color: ghostwhite;
+         text-align: center;
+         border-bottom: 10px solid #aff67b;
+         border-top: 5px solid #aff67b;
+         border-left: 5px solid #aff67b;
+         border-right: 5px solid #aff67b;
+         border-radius: 15px;
+
+
+     }
+.paragraf::before{
+    content: "Datele mele -> ";
+    color: #aff67b;
+}*/
+.quiz{
+    color: ghostwhite;
+    text-align: center;
+    background: rgba(92, 95, 92, 0.4);
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+
+#mesaj_guiz{
+    font-size: 20px;
+}
+
+.timpul{color:red;}
+.castigat{background: #69D508;}
+#joc{
+    color: ghostwhite;
+    text-align: center;
+    background: rgba(104, 107, 104, 0.4);
+    font-size:20px;
+
+}
+#sign{
+    font-size:70px;
+    display: grid;
+    grid-template-areas:
+    'semn play play enter ';
+    grid-gap: 5px;
+    cursor: pointer;
+    border: 2px solid white;
+}
+#play{
+    color: #69D508;
+}
+#titlu_joc{
+    color: #69D508;
+    font-size: 30px;
+}
+
+#pantaloni
+{
+    cursor: grab;
+    padding:25px;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+#bluza
+{border: 2px solid white;
+    border-radius: 10px;
+    padding:25px;}
+#palarie
+{border: 2px solid white;
+    border-radius: 10px;
+    padding:25px;}
+
+
+.stil1{
+    color: white;
+    background-color: rgb(143, 18, 171);
+    font-size: 30px;
+
+}
+
+.stil2{
+    color: #000000;
+    background-color: rgb(255, 170, 0);
+    font-size: 30px;
+
+}
+.stil3{
+    color: #ffffff;
+    background-color: rgb(174, 0, 41);
+    font-size: 30px;
+
+}
+.stil4{
+    color: #000000;
+    background-color: rgb(0, 115, 255);
+    font-size: 30px;
+
+}
+#mesaj_forum{
+    color: rgb(217, 142, 24);
+    font-size: 20px;
+    text-align: center;
+}
+#forum{
+    color:rgb(255, 170, 0);
+    font-size: 20px;
+    text-decoration: none;
+    text-align: center;
+}
+#pag404{
+    color: rgb(76, 255, 0);
+    font-size: 30px;
+    display:block;
+    text-align:center
+}
+
+
+#sectiune_date_contact{
+    margin-top: 100px;
+    color: ghostwhite;
+    text-align: center;
+    border-bottom: 10px solid #aff67b;
+    border-top: 5px solid #aff67b;
+    border-left: 5px solid #aff67b;
+    border-right: 5px solid #aff67b;
+    border-radius: 15px;
+}
+.paragraf::before{
+    content: "Datele mele -> ";
+    color: #aff67b;
+}

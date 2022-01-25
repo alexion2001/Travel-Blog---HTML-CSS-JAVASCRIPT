@@ -1,0 +1,118 @@
+body{background-color: #454743;}
+
+
+
+h1::first-letter {font-size:200%; color: #69D508;}
+h1{color: ghostwhite;
+    font-family: cursive;
+}
+
+/*incepe meniul*/
+nav ul li a{
+    font-family: serif ;
+    text-decoration: none;
+    color:  #454743;
+    display: block;
+    width:100%;
+
+}
+nav ul {
+    list-style-type: none;} /*scoate bulina*/
+nav>ul.meniu{height:100%;}
+nav   /*dimensiuni bara meniu si scris, culori, linii de incadrare meniu*/
+{
+    width: 100%;
+    height:2.5em;
+    background-color: #ADFF2F;
+    text-align: center;
+    font-size: 1.2em;
+}
+.meniu{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+.meniu > li {
+    flex-grow: 2;
+    height: 2.5em;
+    line-height: 2.5em;
+    text-align: center;
+    flex-basis:0; /*centrare scris, dimensiuni*/
+}
+.meniu > li > ul.submeniu {
+    display: none;   /*ascunde desfasurarea meniurilor*/
+}
+.meniu > li:hover > ul.submeniu {  /*pui click si afiseaza submeniu*/
+    display: block;
+    background-color: #aff67b;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+.meniu > li:hover > ul.submeniu:hover{
+    font-style:italic;}
+.meniu li:hover {
+    background-color: #D3FF90;
+    font-style:italic;
+    transition: background-color 1s,color 1s;}/*schimba culoarea cand pui clic*/
+
+
+p.categorie{
+    color:  #454743 ;
+    font-size: 50px;
+    text-align: center;
+    font-family: cursive;
+    background-image: url("nori2.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+aside{
+    position: fixed ;
+    margin-left: -40px;
+    margin-top: 22px;
+    width: 15em;}
+.meniu-vertical a{
+    background-color: #7f8f73;
+    color: black;
+    display: block;
+    padding: 22px 5px 5px 1px;;
+    list-style: none;
+    text-decoration: none;
+    font-size: 150%;
+    text-align: center;
+}
+.meniu-vertical a:hover {
+    background-color: #ccc;
+}
+#titlu_submeniu{
+    border-bottom: 3px solid #020000;
+    background: #aff67b;
+    list-style-type: none;
+    font-size: 150%;
+    padding: 5px;
+    text-align: center;}
+#asia{text-align: center; font-size: 2em; color: #D3FF90;}
+#eur{text-align: center;  font-size: 2em;color: #D3FF90;}
+#usa{text-align: center;  font-size: 2em;color: #D3FF90;}
+
+.continut-pagina p {text-align: justify; margin-left: 15%; color: ghostwhite; font-size: 25px;}
+.mini-titlu{font-size: 30px;}
+table{  width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #cccccc;
+                    }
+td, th {
+    border: 1px solid black;
+    color: black;
+    text-align: center;
+    font-size: 30px;}
+
+@media screen and (max-width:1300px)
+{  .continut-pagina p{text-align: justify; margin-left: 1%;}
+    .meniu-vertical{
+        display: none;
+    }
+}
